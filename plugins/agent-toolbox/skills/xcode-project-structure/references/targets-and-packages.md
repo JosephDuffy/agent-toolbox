@@ -1,13 +1,19 @@
 # Targets and Packages
 
-## Naming
+## Folder Structure
 
--
+- Any app targets should have their code under a folder with the name of the app. For apps that shared the same name add a differentiator to non-main apps, such as "App Name WatchKit".
+- Packages should be added in folders that match their position in the heirachy.
 
 ## App Target
 
 - The app target should facilitate the communication between features, but should not include feature implementations.
-- The app target should create an app-wide dependencies, which can then be injected in to individual features.
+- The app target should create any app-wide dependencies, which can then be injected in to individual features.
+
+## Packages
+
+- All packages should support being used without being opened in the app's Xcode project.
+- Ensure that packages that depend on other packages within the same project use the correct relative path.
 
 ## Heirachy
 
@@ -28,7 +34,8 @@ Core Technologies
 
 ## Utilities
 
-- Utility package must be project-agnostic.
+- Utility package must be project-agnostic, but can be kept in a single project.
+- When used only within the app they should be called AppUtilities.
 - Most utility packages will be added as external dependencies.
 - May depend on other packages in this layer, although rarely.
 - Should have high code coverage.
@@ -41,7 +48,8 @@ Core Technologies
 
 - Should not include any code specific to the app.
 - Might be open-source, or may be made open-source in the future.
-- May be added as external dependencies, excluding where they wrap system functionality and tests would mostly test the system functionality.
+- May be added as external dependencies
+- Should have high code coverage, excluding where they wrap system functionality and tests would mostly test the system functionality.
 - May depend on other packages in this layer, although rarely.
 - May contain multiple libraries.
 - Examples:
@@ -66,7 +74,8 @@ Core Technologies
 ## Feature Packages
 
 - Feature packages are focussed on a single feature.
-- Should split UI and business logic between 2 libraries: FeatureUI and FeatureFoundation.
+- Should split business logic and UI between 2 libraries: Feature and FeatureUI.
+- Should have high code coverage for the business logic library.
 - May not depend on other packages in this layer.
 
 ## Library Boundaries

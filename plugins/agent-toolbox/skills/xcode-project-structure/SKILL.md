@@ -21,6 +21,7 @@ Use this skill when a task changes or evaluates an Xcode project, Swift package,
 - Prefer feature packages for individual features, with app composition tying features together.
 - Keep library boundaries clear and dependency direction aligned with the layer model in `references/targets-and-packages.md`.
 - Keep Xcode folders aligned with the filesystem. Use folders to mirror filesystem structure; avoid Xcode-only groups.
+- Add packages under folders that match their position in the hierarchy.
 
 ## References
 
