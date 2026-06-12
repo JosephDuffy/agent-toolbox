@@ -1,0 +1,7 @@
+interface:
+  display_name: "Swift Foundations"
+  short_description: "Swift style, testing, and package choices"
+  default_prompt: "Use $swift-foundations to review this Swift change for conventions, tests, and dependency choices."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Xcode Structure"
+  short_description: "Xcode, package, and target structure"
+  default_prompt: "Use $xcode-project-structure to review this Xcode and Swift package layout for focused structural improvements."
+
+policy:
+  allow_implicit_invocation: true
