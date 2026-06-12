@@ -1,0 +1,34 @@
+{
+  "name": "agent-toolbox",
+  "version": "0.1.0",
+  "description": "Opinionated agent skills for Joseph Duffy's Swift and Xcode projects.",
+  "author": {
+    "name": "Joseph Duffy",
+    "url": "https://github.com/JosephDuffy"
+  },
+  "homepage": "https://github.com/JosephDuffy/agent-toolbox",
+  "repository": "https://github.com/JosephDuffy/agent-toolbox",
+  "keywords": [
+    "swift",
+    "xcode",
+    "skills",
+    "agents"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent Toolbox",
+    "shortDescription": "Opinionated Swift and Xcode agent skills.",
+    "longDescription": "Reusable Codex skills for applying Joseph Duffy's Swift conventions, testing preferences, common package choices, and Xcode project structure guidance.",
+    "developerName": "Joseph Duffy",
+    "category": "Productivity",
+    "capabilities": [
+      "Write"
+    ],
+    "websiteURL": "https://github.com/JosephDuffy/agent-toolbox",
+    "defaultPrompt": [
+      "Review this Swift change with my conventions.",
+      "Review this Xcode project structure.",
+      "Apply my Swift package preferences."
+    ]
+  }
+}
